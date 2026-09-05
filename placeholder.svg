@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fbd4df"/><stop offset="1" stop-color="#e5d8ff"/></linearGradient></defs>
+<rect width="800" height="1000" fill="url(#g)"/>
+<circle cx="400" cy="390" r="145" fill="#fff" opacity=".55"/>
+<path d="M205 780c55-170 335-170 390 0" fill="#fff" opacity=".55"/>
+<text x="400" y="905" text-anchor="middle" font-family="Arial" font-size="38" fill="#795f6e">Add Bindhu's Photo</text>
+</svg>

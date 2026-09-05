@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff1f5">
+  <title>Happy Birthday, Bindhu! 🎂❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ================= CUSTOMIZE HERE =================
+       Best friend: Bindhu
+       Birthday: 7 September 2026
+       Photo: replace assets/bindhu-photo.jpg
+       Song: replace assets/birthday-song.mp3
+       Personal messages: edit the text sections below
+  ===================================================== -->
+
+  <div id="loader" class="loader-screen">
+    <div class="loader-heart">♥</div>
+    <p>A little surprise is waiting for you<span class="dots">...</span></p>
+    <div class="loader-line"><span></span></div>
+  </div>
+
+  <div class="ambient" aria-hidden="true">
+    <span class="orb orb-1"></span><span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+  <div id="particles" class="particles" aria-hidden="true"></div>
+  <div id="confetti" class="confetti-layer" aria-hidden="true"></div>
+
+  <header class="hero" id="home">
+    <nav class="nav">
+      <a class="brand" href="#home">B<span>♥</span></a>
+      <a class="nav-link" href="#message">For Bindhu ✨</a>
+    </nav>
+
+    <div class="hero-content reveal">
+      <div class="eyebrow">A little birthday magic for you</div>
+      <h1>Happy Birthday,<br><em>My Best Friend!</em> 🎂❤️</h1>
+      <p class="hero-subtitle">Today isn't just another day... it's the day an amazing person was born.</p>
+      <button id="surpriseBtn" class="glow-btn">
+        <span>Open Your Surprise</span> 🎁
+      </button>
+      <div class="scroll-hint">scroll to unwrap the memories <span>↓</span></div>
+    </div>
+
+    <div class="hero-badge badge-left">✦ bestie energy</div>
+    <div class="hero-badge badge-right">made with love ♡</div>
+  </header>
+
+  <main>
+    <section class="section photo-section" id="photo">
+      <div class="section-heading reveal">
+        <span class="section-kicker">one beautiful memory</span>
+        <h2>A little piece of <em>us</em></h2>
+        <p>One photo for now — replace it with your favorite picture of Bindhu.</p>
+      </div>
+
+      <div class="polaroid-wrap reveal">
+        <div class="polaroid">
+          <div class="photo-frame">
+            <img src="assets/bindhu-photo.jpg" alt="Bindhu — replace this photo with your favorite picture"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+            <div class="photo-placeholder">
+              <span>📸</span>
+              <strong>Add Bindhu's Photo</strong>
+              <small>Replace <b>assets/bindhu-photo.jpg</b></small>
+            </div>
+          </div>
+          <div class="polaroid-caption">my favorite human ♡</div>
+        </div>
+        <div class="tape"></div>
+      </div>
+    </section>
+
+    <section class="section message-section" id="message">
+      <div class="paper-card reveal">
+        <div class="paper-flower">✿</div>
+        <span class="section-kicker">a letter for you</span>
+        <h2>Dear Bindhu,</h2>
+        <div class="handwritten">
+          <p>Happy Birthday to the person who has been more than just a friend.</p>
+          <p>Thank you for being there through the good days, bad days, crazy moments, and unforgettable memories.</p>
+          <p>Life is better, crazier, and more beautiful with you in it.</p>
+          <p>I hope this year brings you endless happiness, success, love, laughter, and everything your heart wishes for.</p>
+          <p>No matter where life takes us, I hope our friendship always remains special.</p>
+          <p class="signature">Happy Birthday, Bestie! ❤️🎂<br>Here's to many more memories together! 🥂✨</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section music-section" id="music">
+      <div class="music-card reveal">
+        <div class="vinyl"><div class="vinyl-hole"></div></div>
+        <div class="music-info">
+          <span class="section-kicker">our little soundtrack</span>
+          <h2>Press play & let the memories dance ✨</h2>
+          <p id="musicStatus">Your song will start when you open the surprise.</p>
+          <div class="player">
+            <button id="playPause" class="player-btn" aria-label="Play music">▶</button>
+            <div class="progress-area">
+              <div class="progress-track"><span id="progress"></span></div>
+              <div class="time-row"><span id="currentTime">0:00</span><span id="duration">0:00</span></div>
+            </div>
+            <label class="volume">🔊 <input id="volume" type="range" min="0" max="1" step="0.05" value="0.7"></label>
+          </div>
+          <audio id="birthdayAudio" preload="metadata">
+            <!-- CUSTOMIZE: replace this file with your own MP3 -->
+            <source src="assets/birthday-song.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+    </section>
+
+    <section class="section countdown-section" id="countdown">
+      <div class="countdown-card reveal">
+        <span class="section-kicker">the special moment</span>
+        <h2>Counting down to <em>your day</em> 🎂</h2>
+        <div class="countdown-grid">
+          <div><strong id="days">00</strong><span>days</span></div>
+          <div><strong id="hours">00</strong><span>hours</span></div>
+          <div><strong id="minutes">00</strong><span>minutes</span></div>
+          <div><strong id="seconds">00</strong><span>seconds</span></div>
+        </div>
+        <p id="birthdayText">7 September 2026 • Save the date, bestie! 💕</p>
+      </div>
+    </section>
+
+    <section class="section gift-section" id="gift">
+      <div class="gift-intro reveal">
+        <span class="section-kicker">wait... there's more</span>
+        <h2>There's one more <em>surprise...</em></h2>
+        <p>Go on. You know you want to open it. 👀</p>
+      </div>
+      <button id="giftBox" class="gift-box reveal" aria-label="Open your gift">
+        <span class="gift-lid">🎀</span>
+        <span class="gift-body">🎁</span>
+      </button>
+      <div id="giftMessage" class="gift-message" aria-live="polite">
+        <div class="gift-message-inner">
+          <span class="big-heart">♥</span>
+          <h3>For you, always.</h3>
+          <p>I promise to support you in your good days and your bad bady..❤️</p>
+          <span>— your bestie ✨</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-section" id="final">
+      <div class="final-content reveal">
+        <div class="firework firework-a">✦</div><div class="firework firework-b">✧</div>
+        <span class="section-kicker">one last thing...</span>
+        <h2>Happy Birthday Once Again,<br><em>Bestie!</em> 🎂❤️</h2>
+        <p>Thank you for being part of my story.</p>
+        <div class="final-hearts">♡ ♥ ♡ ♥ ♡</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>Made with <span>♥</span> for my Best Friend • Bindhu</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
